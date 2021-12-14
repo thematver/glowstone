@@ -1,7 +1,5 @@
 library glowstone;
 
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class Glowstone extends StatefulWidget {

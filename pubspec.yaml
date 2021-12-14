@@ -1,7 +1,8 @@
 name: glowstone
-description: A simple widget-wrapper to impressivly highlight something.
-version: 0.0.1
-homepage: 
+description: A simple widget-wrapper to impressively highlight something with glowing animation.
+version: 0.0.2
+homepage: https://github.com/thematver/glowstone
+repository: https://github.com/thematver/glowstone
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
