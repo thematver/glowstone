@@ -1,4 +1,4 @@
-A simple widget-wrapper to impressivly highlight something.
+A simple widget-wrapper to impressivly highlight something animatedly.
 
 This plugin has no dependencies, so you can easily connect it to your project.
 
@@ -12,7 +12,7 @@ Black sun           |  North shine
 
 ## Features
 
-You can change colors, blur and spread.
+You can change colors, spread and speed of animation.
 
 ## Getting started
 
