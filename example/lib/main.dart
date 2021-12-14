@@ -13,20 +13,31 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Glowstone Demo',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.blueAccent,
+        scaffoldBackgroundColor: Colors.lightBlueAccent,
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        body: Center(
-          child: Glowstone(
-            color: Colors.white,
-            child: Container(
-              height: 100,
-              width: 100,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.black,
-              ),
+        body: Glowstone(
+          radius: 200,
+          velocity: 1,
+          color: Colors.tealAccent.withOpacity(0.3),
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Shine Demo",
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        )),
+                Text(
+                  "Made by Glowstone",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6!
+                      .copyWith(color: Colors.white),
+                ),
+              ],
             ),
           ),
         ),

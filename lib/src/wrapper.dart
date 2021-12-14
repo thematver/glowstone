@@ -66,10 +66,11 @@ class _GlowstoneState extends State<Glowstone>
           return Container(
               child: widget.child,
               decoration: BoxDecoration(
+                shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
                     color: widget.color,
-                    blurRadius: 100.0,
+                    blurRadius: 150.0,
                     spreadRadius: _animation.value,
                   )
                 ],

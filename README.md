@@ -1,5 +1,6 @@
 A simple widget-wrapper to impressivly highlight something.
 
+This plugin has no dependencies, so you can easily connect it to your project.
 ## Features
 
 TODO: List what your package can do. Maybe include images, gifs, or videos.
