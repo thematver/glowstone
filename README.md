@@ -21,9 +21,10 @@ Just install the plugin and use `Glowstone` widget.
 
 ```dart
 Glowstone(
-    child: Container(
-            child: ...
-            )
-)
+          radius: 200,
+          velocity: 1,
+          color: Colors.tealAccent,
+          child: Container(),
+          ),
 ```
 
