@@ -1,26 +1,29 @@
 A simple widget-wrapper to impressivly highlight something.
 
 This plugin has no dependencies, so you can easily connect it to your project.
+
+
+Black sun           |  North shine
+:-------------------------:|:-------------------------:
+![Black sun](https://github.com/thematver/glowstone/raw/master/screenshot1.png "Black sun")  |  ![North shine](https://github.com/thematver/glowstone/raw/master/screenshot2.png "North shine")
+
+
+
+
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+You can change colors, blur and spread.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Just install the plugin and use `Glowstone` widget.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
 ```dart
-const like = 'sample';
+Glowstone(
+    child: Container(
+            child: ...
+            )
+)
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
