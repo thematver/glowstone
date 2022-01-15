@@ -28,3 +28,4 @@ Glowstone(
           ),
 ```
 
+Other optional parameters are setting beginRadius, blurRadius and boxShape

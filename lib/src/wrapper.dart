@@ -15,29 +15,39 @@ class Glowstone extends StatefulWidget {
   ///Radius of glowing
   final double radius;
 
+  ///Beginning Radius of glowing
+  final double beginRadius;
+
+  ///Radius of Blur
+  final double blurRadius;
+
+  ///Box Shape of the glow
+  final BoxShape boxShape;
+
   const Glowstone({
     Key? key,
     required this.child,
     this.color = Colors.yellow,
     this.velocity = 2,
     this.radius = 20.0,
+    this.beginRadius = 0.0,
+    this.blurRadius = 150.0,
+    this.boxShape = BoxShape.circle,
   }) : super(key: key);
 
   @override
   _GlowstoneState createState() => _GlowstoneState();
 }
 
-class _GlowstoneState extends State<Glowstone>
-    with SingleTickerProviderStateMixin {
+class _GlowstoneState extends State<Glowstone> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation _animation;
 
   @override
   void initState() {
     int duration = 5000 ~/ widget.velocity;
-    _controller = AnimationController(
-        vsync: this, duration: Duration(milliseconds: duration));
-    _animation = Tween(begin: 0.0, end: widget.radius).animate(_controller)
+    _controller = AnimationController(vsync: this, duration: Duration(milliseconds: duration));
+    _animation = Tween(begin: widget.beginRadius, end: widget.radius).animate(_controller)
       ..addListener(() {
         setState(() {});
       })
@@ -64,11 +74,11 @@ class _GlowstoneState extends State<Glowstone>
           return Container(
               child: widget.child,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
+                shape: widget.boxShape,
                 boxShadow: [
                   BoxShadow(
                     color: widget.color,
-                    blurRadius: 150.0,
+                    blurRadius: widget.blurRadius,
                     spreadRadius: _animation.value,
                   )
                 ],
