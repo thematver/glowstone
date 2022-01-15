@@ -16,7 +16,7 @@ class Glowstone extends StatefulWidget {
   final double radius;
 
   ///Beginning Radius of glowing
-  final double radiusBegin;
+  final double beginRadius;
 
   ///Radius of Blur
   final double blurRadius;
@@ -30,7 +30,7 @@ class Glowstone extends StatefulWidget {
     this.color = Colors.yellow,
     this.velocity = 2,
     this.radius = 20.0,
-    this.radiusBegin = 0,
+    this.beginRadius = 0.0,
     this.blurRadius = 150.0,
     this.boxShape = BoxShape.circle,
   }) : super(key: key);
@@ -47,7 +47,7 @@ class _GlowstoneState extends State<Glowstone> with SingleTickerProviderStateMix
   void initState() {
     int duration = 5000 ~/ widget.velocity;
     _controller = AnimationController(vsync: this, duration: Duration(milliseconds: duration));
-    _animation = Tween(begin: widget.radiusBegin, end: widget.radius).animate(_controller)
+    _animation = Tween(begin: widget.beginRadius, end: widget.radius).animate(_controller)
       ..addListener(() {
         setState(() {});
       })
